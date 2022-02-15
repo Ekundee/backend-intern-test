@@ -1,0 +1,9 @@
+##
+On first launch of webapplication run localhost:300/sql_crreate in browser to create appropriate server 
+and database in postgresql.
+
+##
+After that you can then run localhost:3000 and use application casually.
+
+##
+After login, tokens are printed on the console
