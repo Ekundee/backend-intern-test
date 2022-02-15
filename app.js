@@ -1,10 +1,21 @@
+require("dotenv").config();
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+const loginRoute = require("./routes/loginRoute.js")
+const registerRoute = require("./routes/registerRoute.js")
+const {Pool,Client} = require("pg")
+const sqlCreateRoute = require("./routes/sqlCreateRoute.js")
+const dotenv = require("dotenv")
+const jwt = require("jsonwebtoken")
 
 var app = express();
+
+
+app.use("/register", registerRoute);
+app.use("/sqlcreate" , sqlCreateRoute);
+app.use("/login" , loginRoute);
 
 app.use(logger('dev'));
 app.use(express.json());
