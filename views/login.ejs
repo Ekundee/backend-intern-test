@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rise Login</title> 
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <div class="full-page">
+        <div class="full_page">
+
+
+              <div class="responsiveHeader" id="responsiveHeader">
+                <div class="links" id = "reslink">
+                     <ul>
+                        <a href=""><li class="app">Home</li></a>
+                        <a href="#"><li>Products</li></a>
+                        <a href="#"><li style="display: flex; flex-direction: row;">Investment&nbsp;Club<img src="down.png" alt="" srcset="" width="25px"></li></a>
+                        <a href="#"><li>About&nbsp;Us</li></a>
+                        <a href="#"><li>FAQs</li></a>
+                        <a href="#"><li>Blogs</li></a>
+                    </ul>
+                </div>               
+            </div>
+
+             <!-- header -->
+            <header class="header">
+                  <div class="company-details">
+                    <img src="risevestIcon.png" alt="" srcset="">
+                    <img class="menu" id="menu" src="menu.png" alt="" srcset="" width="80px" onclick="dropdown()">
+                </div>
+                <div class="links" id="normLink">
+                    <ul>
+                        <a href=""><li class="app">Home</li></a>
+                        <a href="#"><li>Products</li></a>
+                        <a href="#"><li style="display: flex; flex-direction: row;">Investment&nbsp;Club<img src="down.png" alt="" srcset="" width="25px"></li></a>
+                        <a href="#"><li>About&nbsp;Us</li></a>
+                        <a href="#"><li>FAQs</li></a>
+                        <a href="#"><li>Blogs</li></a>
+                        
+                    </ul>
+                </div>
+            </header>
+
+
+
+            <!-- main -->
+            <main class="main">
+                    
+                    <form action="/login" method="post">
+                        <h1 style="margin: 0px;">Login</h1>
+                    <div class="input-txtbx-div error" id="error">
+                        <%= information.info  %> 
+                    </div>
+                    <div class="input-txtbx-div">
+                        <label for="" class="labels">Email: </label> 
+                        <br>
+                        <input type="email" name="email" id="" class="input-txtbx">
+                    </div>
+                    <div class="input-txtbx-div">
+                        <label for="" class="labels">Password: </label> 
+                        <br>
+                        <input type="password" name="password" id="" class="input-txtbx">
+                    </div>
+                    <div class="input-txtbx-div">
+                        <input type="submit" class="submit_button" value="Login">
+                    </div>       
+                     <div class="input-txtbx-div">
+                        <p style="font-size: 18px;">Not Registered?  <a href="/">Register</a></p>
+                    </div>             
+                </form>
+
+
+                <div class="right-main">
+                    <img src="right_side.jpg" alt="">
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <script>
+
+      
+            document.getElementById("error").style.color = "<%= information.color%>"
+      
+
+
+
+        isShowing = false
+         var dropdown= () =>{
+            
+            if(isShowing == false){
+                document.getElementById("menu").src = "close.png"
+                document.getElementById("responsiveHeader").style.display = "flex"
+                isShowing =true
+            }else{
+                isShowing = false
+                document.getElementById("menu").src = "menu.png"
+                document.getElementById("responsiveHeader").style.display = "none"
+            }
+        }
+    </script>
+    <div class="design1"></div>
+    <div class="design2"></div>
+    <div class="design3"></div>
+</body>
+</html>

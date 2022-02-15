@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rise register</title>
+    <link rel="stylesheet" href="./register.css">
+</head>
+<body>
+    <div class="full-page">
+        <div class="full_page">
+
+            <div class="responsiveHeader" id="responsiveHeader">
+                <div class="links" id = "reslink">
+                     <ul>
+                        <a href=""><li class="app">Home</li></a>
+                        <a href="#"><li>Products</li></a>
+                        <a href="#"><li style="display: flex; flex-direction: row;">Investment&nbsp;Club<img src="down.png" alt="" srcset="" width="25px"></li></a>
+                        <a href="#"><li>About&nbsp;Us</li></a>
+                        <a href="#"><li>FAQs</li></a>
+                        <a href="#"><li>Blogs</li></a>
+                    </ul>
+                </div>               
+            </div>
+
+
+            <!-- header -->
+            <header class="header">
+                <div class="company-details">
+                    <img src="risevestIcon.png" alt="" srcset="">
+                    <img class="menu" id="menu" src="menu.png" alt="" srcset="" width="80px" onclick="dropdown()">
+                </div>
+                <div class="links" id="normLink">
+                    <ul>
+                        <a href=""><li class="app">Home</li></a>
+                        <a href="#"><li>Products</li></a>
+                        <a href="#"><li style="display: flex; flex-direction: row;">Investment&nbsp;Club<img src="down.png" alt="" srcset="" width="25px"></li></a>
+                        <a href="#"><li>About&nbsp;Us</li></a>
+                        <a href="#"><li>FAQs</li></a>
+                        <a href="#"><li>Blogs</li></a>
+                        
+                    </ul>
+                </div>
+                           
+            </header>
+
+            <!-- main -->
+            <main class="main">
+
+                <form action="/register" method="post">
+                    <div class="input-txtbx-div">
+                        <h1 style="margin : 0px">Register</h1>
+                    </div>
+                    <div class="input-txtbx-div error" id="error">
+                        <p><%= information.info %> </p>
+                    </div>
+                    <div class="input-txtbx-div">
+                        <label class="labels" for="">Email: </label> 
+                        <br>
+                        <input type="email" name="email" id="email" class="input-txtbx">
+                    </div>
+
+                    <div class="input-txtbx-div">
+                        <label class="labels" for="">Firstname: </label> 
+                        <br>
+                        <input type="text" name="firstname"  id="firstname" class="input-txtbx">
+                    </div>
+
+                    <div class="input-txtbx-div">
+                        <label class="labels" for="">Lastname: </label> 
+                        <br>
+                        <input type="text" name="lastname" id="lastname" class="input-txtbx"> 
+                    </div>
+
+                    <div class="input-txtbx-div">
+                        <label class="labels" for="">Phone-Number: </label> 
+                        <br>
+                        <input type="tel" name="phoneNo" id="phoneNo" class="input-txtbx">
+                    </div>
+
+                    <div class="input-txtbx-div">
+                        <label class="labels" for="">Password: </label> 
+                        <br>
+                        <input type="password" name="password" id="password" class="input-txtbx">
+                    </div>
+
+                    <div class="input-txtbx-div">
+                        <input type="submit" class="submit_button" value="Register">
+                    </div>
+
+                     <div class="input-txtbx-div">
+                        <p style="font-size: 18px;">Already Registered? <a href="/login_page">Login</a></p>
+                    </div>
+                </form>
+
+                <div class="right-main">
+                    <img src="right_side.jpg" alt="">
+                </div>
+            </main>
+
+            <!-- footer -->
+            <footer class="footer">
+
+            </footer>
+        </div>
+    </div>
+    
+
+    <div class="design1"></div>
+    <div class="design2"></div>
+    <div class="design3"></div>
+
+    <script>
+        isShowing = false;
+
+        if("<%=information.time%>" != ""){
+            document.getElementById("error").style.color = "green"
+
+            setTimeout(() => {
+                window.location.replace("/login_page")
+            },parseInt("<%=information.time%>"));
+        }
+
+        var dropdown= () =>{
+            
+            if(isShowing == false){
+                document.getElementById("menu").src = "close.png"
+                document.getElementById("responsiveHeader").style.display = "flex"
+                isShowing =true
+            }else{
+                isShowing = false
+                document.getElementById("menu").src = "menu.png"
+                document.getElementById("responsiveHeader").style.display = "none"
+            }
+        }
+
+        
+    </script>
+
+</body>
+</html>

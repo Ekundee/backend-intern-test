@@ -1,0 +1,342 @@
+*{
+    box-sizing: border-box;
+}
+
+.full-page{
+    position:absolute;
+    top: 0px;
+    left:0px;
+    width: 100%;
+}
+
+.full_page{
+    position: relative;
+    max-width: 1920px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+.responsiveHeader{
+    height: 170px;
+    display: none;   
+}
+
+.responsiveHeaderHead img{
+    color: #0998A0;
+    margin: 10px;
+    margin-bottom: 0px;
+}
+
+.responsiveHeaderHead img:hover .full-page{
+    height: 0px;
+    transition: all 3s 3s ease-in;
+}
+.responsiveHeader .links{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.responsiveHeader .links .app{
+   color: #0998A0;
+   font-weight: bolder;
+}
+.responsiveHeader .links ul{
+    list-style : none;
+    width: 100%;
+}
+
+.responsiveHeader .links ul a{
+    color: #0998A0;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.responsiveHeader .links ul li{
+    margin: 20px;
+    border-bottom: solid 0.2px grey ;
+    width: 100%;
+}
+
+.responsiveHeaderFooter{
+    width: 100%;
+    text-align: center;
+    color: grey;
+}
+.responsiveHeaderFooter img{
+    width: 110px;
+}
+
+#menu{
+        display: none;
+}
+
+
+
+.header{
+    position: relative;
+    top:0;
+    /* bottom:100%; */
+    display: flex;
+    /* height:700px; */
+    width: 100%;
+    z-index: 2;
+    background: white;
+    border-bottom: solid 1px rgb(187, 187, 187);
+}
+
+.menu{
+   display: flex;
+}
+.menu img{
+    width: 40px;
+    height: 40px;
+}
+
+.company-details{
+    position: relative;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.company-details img {
+    margin-left: 20px;
+}
+
+.links{
+    position: relative;
+    width: 50%;
+}
+
+
+.header ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header ul li{
+    list-style: none;
+    font-size: 19px;
+    margin: 18px;
+    font-weight: 900;
+}
+
+.header ul a{
+    font-size: 20px;
+    color: #0998A0;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+/* main */
+.main{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+}
+
+form { 
+    width : 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.labels{
+    font-weight: bold;
+    font-size: 17px;
+    color: #0998A0;
+}
+.input-txtbx-div{
+    margin: 15px;
+}
+
+.input-txtbx{
+    position: relative;
+    width: 300px;
+    padding: 5px;
+    font-size: 17px;
+    outline: none;
+    border-width: 0px;
+    border-bottom: solid 1px black;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+
+
+.submit_button{
+    position: relative;
+    width: 100px;
+    height: 40px;
+    border: 0px;
+    background-color: #0998A0;
+    color: white;
+    font-size: 17px;
+}
+
+.right-main{
+    position:relative;
+    width: 50%;    
+    display: grid;
+    place-items: center;    
+    border-left-width: 1px solid black;
+}
+
+.right-main img{
+    position:relative; 
+    width: 300px; 
+    height: 90%; 
+    box-shadow: 0px 0px 7px 7px grey; 
+    border-radius: 20px;
+    transform: translateY(90px);
+
+     animation-name: upNdown;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes upNdown {
+    0%{
+        transform: translateY(30px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(30px);
+    }
+}
+
+.error{
+    position: relative;
+    color : red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.design1{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background-color: #E2F3F3;
+    top: 200px;
+    left: 170px;
+    border-radius: 1000px;
+    z-index: -7;
+     animation-name: ball1upNdown;
+    animation-duration: 9s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+.design2{
+    position: fixed;
+    width: 80px;
+    height: 80px;
+   background-color: #E2F3F3; 
+   top: 400px;
+   left: 400px;
+   border-radius: 1000px;
+   z-index: -7;
+    animation-name: ball2upNdown;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+.design3{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background-color: #E2F3F3;
+    top: 300px;
+    left: 600px;
+    border-radius: 1000px;
+    z-index: -7;
+     animation-name: ball3upNdown;
+    animation-duration: 8s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ball1upNdown {
+    0%{
+        transform: translateY(90px);
+    }
+    50%{
+        transform: translateY(-90px);
+    }
+    100%{
+        transform: translateY(90px);
+    }
+}
+
+@keyframes ball2upNdown {
+    0%{
+        transform: translateY(70px);
+    }
+    50%{
+        transform: translateY(-70px);
+    }
+    100%{
+        transform: translateY(70px);
+    }
+}
+
+@keyframes ball3upNdown {
+    0%{
+        transform: translateY(150px);
+    }
+    50%{
+        transform: translateY(-150px);
+    }
+    100%{
+        transform: translateY(150px);
+    }
+}
+
+
+@media (max-width: 880px) {
+   .right-main{
+        display: none;
+    }
+    form{
+        width: 100%;
+        padding: 100px;
+    }
+    #normLink{
+        display: none;
+    }
+
+    .header{
+        position: fixed;
+    }
+
+    .responsiveHeader{
+        margin-top: 80px;
+    }
+
+    .company-details{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+     #menu{
+        padding: 30px;
+        display: flex;
+    }
+}
